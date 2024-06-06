@@ -6,4 +6,5 @@ function bigImg(x) {
 function normalImg(x) {
   x.style.filter = "none";
   x.style.transform = "none";
+  
 }

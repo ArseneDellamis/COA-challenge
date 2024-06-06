@@ -1,0 +1,9 @@
+/* now we are going to make our container
+a lexbox to meet our desired design */
+
+.container{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  
+}

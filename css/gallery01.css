@@ -2,7 +2,6 @@
 a lexbox to meet our desired design */
 
 .container{
-		margin: 100px;
 		display: flex;
 		flex-direction: row;
 		position: relative;

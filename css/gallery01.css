@@ -1,5 +1,11 @@
 /* now we are going to make our container
 a lexbox to meet our desired design */
+.grid-container{
+	display: grid;
+	grid-template-rows: auto;
+	justify-content: center;
+	margin-top: 100px;
+}
 
 .container{
 		display: flex;

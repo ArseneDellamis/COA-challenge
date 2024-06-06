@@ -5,5 +5,5 @@ a lexbox to meet our desired design */
   display: flex;
   flex-direction: row;
   position: relative;
-  
+  width: 300px;
 }

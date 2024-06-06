@@ -1,0 +1,33 @@
+.flex-container {
+	margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100px;
+  gap: 2px;
+}
+img{
+	object-fit: cover;
+	transition: all 0.5s ease-in-out;
+}
+.image-caption{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.caption {
+	position: absolute;
+	bottom:70px;
+	left: 35px;
+}
+.link {
+	position: absolute;
+	bottom: 30px;
+	left:35px ;
+}
+/*for responsiveness*/
+@media (max-width: 720px) {
+  .container-grid {
+    flex-direction: column;
+  }
+}

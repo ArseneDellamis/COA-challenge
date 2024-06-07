@@ -38,10 +38,9 @@ install neccessary IDEs and browser to run the project
 ## Execution
     1. open project with the IDE then run the fill gallery.html
     2. open project with the IDE then under Challenges you can run arrayMap.js and                   stringTransform.js
-| Gallery01 |
+| gallery |
 
 <img src="https://github.com/ArseneDellamis/COA-challenge/assets/98157912/8dfeae12-dcdb-4abf-9e7d-c52cac2156fa" />
 
-| Gallery03 |
 
 <img src="https://github.com/ArseneDellamis/COA-challenge/assets/98157912/eda3694c-7c65-4f01-add0-674da5e38753" />

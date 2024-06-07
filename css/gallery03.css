@@ -1,99 +1,59 @@
-/* flexible container positioned relative
-to align element vertically */
-.flex-container {
-  position: relative;
-	top: 100px;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  overflow: hidden;
-  width: auto;
-  gap: 2px;
+/* now we are going to make our container
+a lexbox to meet our desired design */
+.grid-container{
+	display: grid;
+	grid-template-rows: auto;
+	justify-content: center;
+	margin-top: 100px;
 }
 
-/* css for all images */
+.container{
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		width: 400px;
+		gap: 2px;
+}
+/* overflow  will help during hover so that the image
+does enlarge beyond it's container and transition
+to control the pace*/
 img {
-  object-fit: cover;
-  transition: all 0.5s ease-in-out;
-	filter: brightness(0.88);
+		object-fit: fit;
+		transition: all 0.5s ease-in-out;
 }
 
-/* css for the division of image and contents */
-.image-caption {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-	
-}
-
-/* css for the specified div image */
-.image-caption img {
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
+.photo, .photo1{
+	overflow: hidden;
 	width: 100%;
 }
-/* css for the contents */
-.caption {
-  position: absolute;
-  bottom: 70px;
-  left: 35px;
-  overflow: hidden;
-	/* the zoom effect */
-  transition: all 0.5s ease-in-out;
+
+.photo {
+		display: flex;
+		justify-content: center;
+		transition: all 0.5s ease-in-out;
 }
-/* css for the sub content first and second */
-.first {
-  display: block;
-  width: 100%;
-}
-.first, .second {
-	/* gap between elements */
-	margin: 2px;
-}
-/* css for link */
-.link {
-  /* Position the link relative to its parent container */
-  position: absolute;
-  bottom: 10px;
-  left: 35px;
-	/* width: 100%; */
-  /* Center the link horizontally and vertically */
-  transform: translate(-50%, -50%);
-  /* Smooth transition for opacity change */
-  transition: opacity 0.5s ease-out;
-  /* Initially hide the link */
-  opacity: 0;
+.photo1 img {
+		display: flex;
+		justify-content: center;
+		transition: all 0.5s ease-in-out;
+		object-fit: cover;
 }
 
-.link p {
-	margin-left: 90px;
-	text-align: center;
-}
+/* controlling what will happen if we hover on the 
+    image.
+    grayscale turns it to gray and blur blurs the
+    hovered image and the scale dictates how big
+    image is unlarged */
+.photo:hover img{
 
-.link a {
- text-decoration: none;
- font-size: 16px;
+		filter: grayscale(2) blur(5px);
+		transform: scale(1.1);
+  
 }
-
-.image-caption:hover img {
-  transform: scale(1.1);
-  filter: brightness(0.7) grayscale(2) blur(8px);
-	
-}
-.image-caption:hover .caption {
-  position: absolute;
-  bottom: 90px;
-  left: 35px;
-}
-/* Show the link when hovering over the .image-caption */
-.image-caption:hover .link {
-  opacity: 1;
-}
-
 
 /*for responsiveness*/
-@media (max-width: 720px) {
-  .container-grid {
-    flex-direction: column;
-  }
+@media(max-width: 720px){
+	.container-grid{
+			flex-direction: column;
+	}
 }

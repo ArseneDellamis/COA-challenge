@@ -15,8 +15,4 @@ h1{
 a{
 	color: rgb(74, 206, 206);
 }
-img {
-  object-fit: cover;
-  transition: all 0.5s ease-in-out;
-	filter: brightness(0.88);
-}
+

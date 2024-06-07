@@ -1,3 +1,5 @@
+/* flexible container positioned relative
+to align element vertically */
 .flex-container {
   position: relative;
 	top: 100px;
@@ -8,12 +10,15 @@
   width: auto;
   gap: 2px;
 }
+
+/* css for all images */
 img {
   object-fit: cover;
   transition: all 0.5s ease-in-out;
 	filter: brightness(0.88);
 }
 
+/* css for the division of image and contents */
 .image-caption {
   position: relative;
   display: flex;
@@ -21,25 +26,31 @@ img {
 	
 }
 
+/* css for the specified div image */
 .image-caption img {
   overflow: hidden;
   transition: all 0.5s ease-in-out;
 	width: 100%;
 }
+/* css for the contents */
 .caption {
   position: absolute;
   bottom: 70px;
   left: 35px;
   overflow: hidden;
+	/* the zoom effect */
   transition: all 0.5s ease-in-out;
 }
+/* css for the sub content first and second */
 .first {
   display: block;
   width: 100%;
 }
 .first, .second {
+	/* gap between elements */
 	margin: 2px;
 }
+/* css for link */
 .link {
   /* Position the link relative to its parent container */
   position: absolute;

@@ -1,81 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Gallery</title>
-    <!-- link our css files to html -->
-    <link rel="stylesheet" href="/css/general.css" />
-    <link rel="stylesheet" href="/css/gallery03.css" />
-  </head>
-  <body>
-    <!-- for my Gallery we are using Flexbox so we are going
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <!-- link our css files to html -->
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/gallery01.css">
+
+</head>
+<body>
+    <!-- for positioning our flexbox -->
+    <div class="grid-container">
+  <!-- for my Gallery we are using Flexbox so we are going
         to need a parent container to hold all html element
         we are going to use
        -->
-    <div class="flex-container">
-      <!-- creating container called photo to hold the image 
-          and the captions-->
-      <div class="image-caption">
-        <div class="picture">
-          <img src="/img/fox.png" alt="" />
-        </div>
-        <div class="caption">
-          <h1 class="first">FENNEC</h1>
-					<h1 class="second">FOX</h1>
-          <p>India</p>
-        </div>
-				<div class="link">
-					<p>
-						<a href="#">know more &rarr;</a>
-					</p>
-				</div>
-      </div>
-      <div class="image-caption">
-        <!-- <div class="picture"> -->
-          <img src="/img/whale.png" alt="" />
-        <!-- </div> -->
-        <div class="caption">
-          <h1 class="first">HUMPBACK</h1>
-					<h1 class="second">WHALE</h1>
-          <p>South Africa</p>
-        </div>
-				<div class="link">
-					<p>
-						<a href="#">know more &rarr;</a>
-					</p>
-				</div>
-      </div>
-      <div class="image-caption">
-        <!-- <div class="picture"> -->
-          <img src="/img/baboon.png" alt="" />
-        <!-- </div> -->
-        <div class="caption">
-          <h1 class="first">COMMON BROWN</h1>
-					<h1 class="second">BABOON</h1>
-          <p>Amazon</p>
-        </div>
-				<div class="link">
-					<p>
-						<a href="#">Know more &rarr;</a>
-					</p>
-				</div>
-      </div>
-      <div class="image-caption">
-        <!-- <div class="picture"> -->
-          <img src="/img/gazell2.png" alt="" class="gazelle" />
-        <!-- </div> -->
-        <div class="caption">
-          <h1 class="first">SPOTTED</h1>
-					<h1 class="second">DEER</h1>
-          <p>India</p>
-        </div>
-				<div class="link">
-					<p>
-						<a href="#">know more &rarr;</a>
-					</p>
-				</div>
-      </div>
-    </div>
-  </body>
+  <div class="container">
+    <!-- creating container called photo to hold the image -->
+     <div class="photo">
+        <img src="/img/fox.png" alt="">
+     </div>
+     <div class="photo">
+        <img src="/img/whale.png" alt="">
+     </div>
+     <div class="photo">
+        <img src="/img/baboon.png" alt="">
+     </div>
+     <div class="photo1">
+        <img  onmouseover="bigImg(this)" 
+           onmouseout="normalImg(this)"
+           src="/img/gazelle.png" 
+        alt="">
+     </div>
+     </div> 
+    </div> 
+     <script src="/scripts/gallery01-photo4.js"></script>
+</body>
 </html>

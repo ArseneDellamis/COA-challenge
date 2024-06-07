@@ -1,42 +1,39 @@
 /* now we are going to make our container
 a lexbox to meet our desired design */
-.grid-container{
-	display: grid;
-	grid-template-rows: auto;
-	justify-content: center;
-	margin-top: 100px;
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-.container{
-		display: flex;
-		flex-direction: row;
-		position: relative;
-		width: 400px;
-		gap: 2px;
+.container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 400px;
+  gap: 2px;
 }
 /* overflow  will help during hover so that the image
 does enlarge beyond it's container and transition
 to control the pace*/
 img {
-		object-fit: fit;
-		transition: all 0.5s ease-in-out;
-}
-
-.photo, .photo1{
-	overflow: hidden;
-	width: 100%;
+  object-fit: fit;
+  transition: all 0.5s ease-in-out;
 }
 
 .photo {
-		display: flex;
-		justify-content: center;
-		transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
 }
 .photo1 img {
-		display: flex;
-		justify-content: center;
-		transition: all 0.5s ease-in-out;
-		object-fit: cover;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  object-fit: cover;
 }
 
 /* controlling what will happen if we hover on the 
@@ -44,16 +41,14 @@ img {
     grayscale turns it to gray and blur blurs the
     hovered image and the scale dictates how big
     image is unlarged */
-.photo:hover img{
-
-		filter: grayscale(2) blur(5px);
-		transform: scale(1.1);
-  
+.photo:hover img {
+  filter: grayscale(2) blur(5px);
+  transform: scale(1.1);
 }
 
 /*for responsiveness*/
-@media(max-width: 720px){
-	.container-grid{
-			flex-direction: column;
-	}
+@media (max-width: 720px) {
+  .container-grid {
+    flex-direction: column;
+  }
 }

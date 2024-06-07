@@ -89,7 +89,7 @@
 }
 
 /* responsiveness */
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     /* hidden the caption when shrink */
     .photo .caption, .photo .link {
       display: none;

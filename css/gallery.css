@@ -1,5 +1,4 @@
 .container {
-    /* margin-top: 100px; */
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,24 +6,26 @@
     justify-content: center;
 }
 
-/* style the container to be flexible */
 .gallery-container {
+/* style the container to be flexible */
   display: flex;
   flex-direction: row;
   gap: 2px;
   justify-content: center;
-  
 }
+
 .photo {
   position: relative;
   overflow: hidden;
 }
+
 .photo img {
   object-fit: cover;
   width: 100%;
   transition: all 0.5s ease-in-out;
   filter: brightness(0.88); 
 }
+
 .description {
   position: absolute;
   display: flex;
@@ -34,8 +35,6 @@
   margin-left: 25px;
   transition: all 0.5 ease-in-out;
 }
-
-/* copy pasted */
 
 .caption {
   position: absolute;
@@ -49,11 +48,12 @@
   display: block;
   width: 100%;
 }
+
 .first, .second {
 	margin: 0;
   padding: 0;
 }
-/* css for link */
+
 .link {
   position: absolute;
   bottom: 10px;
@@ -68,16 +68,17 @@
 }
 
 .link a {
+  /* Removing the underline on the link */
  text-decoration: none;
  font-size: 16px;
 }
 
-/* the hover responsive and functionalities */
+/* The hover responsive and functionalities */
 .photo:hover img {
   transform: scale(1.1);
   filter: brightness(0.7) grayscale(2) blur(8px);
-	
 }
+
 .photo:hover .caption {
   position: absolute;
   bottom: 90px;
@@ -88,23 +89,23 @@
   opacity: 1;
 }
 
-/* responsiveness */
+/* Responsiveness  */
+
 @media (max-width: 768px) {
-    /* hidden the caption when shrink */
+    /* Hidden the caption when shrink */
     .photo .caption, .photo .link {
       display: none;
     }
-    /* take on the whole available space */
+
     .gallery-container .photo {
+      /* Take on the whole available space */
       height: 100vh;
     }
-    /* make the image fit */
+    /* Make the image fit */
     .gallery-container .photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
 
   }
-
 }
-

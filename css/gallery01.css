@@ -11,20 +11,19 @@ to align element vertically */
   width: auto;
   gap: 2px;
 }
-
-/* css for all images */
-img {
-  object-fit: cover;
-  transition: all 0.5s ease-in-out;
-	filter: brightness(0.88);
-}
-
 /* css for the division of image and contents */
 .image-caption {
   position: relative;
   display: flex;
   overflow: hidden;
 	
+}
+
+/* css for all images */
+img {
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+	filter: brightness(0.88);
 }
 
 /* css for the specified div image */
@@ -54,14 +53,11 @@ img {
 }
 /* css for link */
 .link {
-  /* Position the link relative to its parent container */
   position: absolute;
   bottom: 10px;
   left: 35px;
-	/* width: 100%; */
   /* Center the link horizontally and vertically */
   transform: translate(-50%, -50%);
-  /* Smooth transition for opacity change */
   transition: opacity 0.5s ease-out;
   /* Initially hide the link */
   opacity: 0;
@@ -74,6 +70,7 @@ img {
  font-size: 16px;
 }
 
+/* the hover responsive and functionalities */
 .image-caption:hover img {
   transform: scale(1.1);
   filter: brightness(0.7) grayscale(2) blur(8px);
@@ -84,13 +81,13 @@ img {
   bottom: 90px;
   left: 35px;
 }
-/* Show the link when hovering over the .image-caption */
+
 .image-caption:hover .link {
   opacity: 1;
 }
 
 
-/*for responsiveness*/
+/*full Screen responsiveness*/
 @media (max-width: 720px) {
   .container-grid {
     flex-direction: column;

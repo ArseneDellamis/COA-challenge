@@ -1,30 +1,85 @@
 .flex-container {
-	margin-top: 80px;
+  position: relative;
+	top: 100px;
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 100px;
+  overflow: hidden;
+  width: auto;
   gap: 2px;
 }
-img{
-	object-fit: cover;
-	transition: all 0.5s ease-in-out;
+img {
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+	filter: brightness(0.88);
 }
-.image-caption{
-	position: relative;
-	display: flex;
-	flex-direction: column;
+
+.image-caption {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+	
+}
+
+.image-caption img {
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+	width: 100%;
 }
 .caption {
-	position: absolute;
-	bottom:70px;
-	left: 35px;
+  position: absolute;
+  bottom: 70px;
+  left: 35px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.first {
+  display: block;
+  width: 100%;
+}
+.first, .second {
+	margin: 2px;
 }
 .link {
-	position: absolute;
-	bottom: 30px;
-	left:35px ;
+  /* Position the link relative to its parent container */
+  position: absolute;
+  bottom: 10px;
+  left: 35px;
+	/* width: 100%; */
+  /* Center the link horizontally and vertically */
+  transform: translate(-50%, -50%);
+  /* Smooth transition for opacity change */
+  transition: opacity 0.5s ease-out;
+  /* Initially hide the link */
+  opacity: 0;
 }
+
+.link p {
+	margin-left: 90px;
+	text-align: center;
+}
+
+.link a {
+ text-decoration: none;
+ font-size: 16px;
+}
+
+.image-caption:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7) grayscale(2) blur(8px);
+	
+}
+.image-caption:hover .caption {
+  position: absolute;
+  bottom: 90px;
+  left: 35px;
+}
+/* Show the link when hovering over the .image-caption */
+.image-caption:hover .link {
+  opacity: 1;
+}
+
+
 /*for responsiveness*/
 @media (max-width: 720px) {
   .container-grid {

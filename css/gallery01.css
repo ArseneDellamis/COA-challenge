@@ -3,6 +3,7 @@ to align element vertically */
 .flex-container {
   position: relative;
 	top: 100px;
+  left: 10%;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -48,7 +49,8 @@ img {
 }
 .first, .second {
 	/* gap between elements */
-	margin: 2px;
+	margin: 0;
+  padding: 0;
 }
 /* css for link */
 .link {
@@ -63,11 +65,8 @@ img {
   transition: opacity 0.5s ease-out;
   /* Initially hide the link */
   opacity: 0;
-}
-
-.link p {
-	margin-left: 90px;
-	text-align: center;
+  display: flex;
+  left: 50%;
 }
 
 .link a {

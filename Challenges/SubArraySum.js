@@ -1,4 +1,5 @@
 function isSubArrayFromSum(arr, sum) {
+    
     let currentSum = 0;
     const sumMap = new Map();  // map to store sums at each index
 

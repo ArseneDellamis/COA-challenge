@@ -3,7 +3,6 @@ package com.wallet.app.Wallet_Application.AppConfig;
 import com.wallet.app.Wallet_Application.service.CustomUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -11,12 +10,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 //@Configuration
-public class Config {
+public class Thymeleaf_Config {
 
     private CustomUserDetailService userDetailService;
 
     @Autowired
-    public Config(CustomUserDetailService userDetailService) {
+    public Thymeleaf_Config(CustomUserDetailService userDetailService) {
         this.userDetailService = userDetailService;
     }
 

@@ -1,6 +1,6 @@
 package com.wallet.app.Wallet_Application.service;
 
-import com.wallet.app.Wallet_Application.controller.DTO.CategoryRequest;
+import com.wallet.app.Wallet_Application.DTO.CategoryRequest;
 import com.wallet.app.Wallet_Application.daoRepository.CategoryRepository;
 import com.wallet.app.Wallet_Application.daoRepository.UserRepository;
 import com.wallet.app.Wallet_Application.entity.Category;

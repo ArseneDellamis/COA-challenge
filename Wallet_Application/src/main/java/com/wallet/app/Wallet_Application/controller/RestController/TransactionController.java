@@ -1,17 +1,12 @@
 package com.wallet.app.Wallet_Application.controller.RestController;
 
-import com.wallet.app.Wallet_Application.controller.DTO.TransactionRequest;
-import com.wallet.app.Wallet_Application.daoRepository.AccountRepository;
-import com.wallet.app.Wallet_Application.daoRepository.UserRepository;
-import com.wallet.app.Wallet_Application.entity.Account;
+import com.wallet.app.Wallet_Application.DTO.TransactionRequest;
 import com.wallet.app.Wallet_Application.entity.Transaction;
-import com.wallet.app.Wallet_Application.entity.User;
 import com.wallet.app.Wallet_Application.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;

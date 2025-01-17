@@ -1,6 +1,6 @@
 package com.wallet.app.Wallet_Application.controller.RestController;
 
-import com.wallet.app.Wallet_Application.controller.DTO.CategoryRequest;
+import com.wallet.app.Wallet_Application.DTO.CategoryRequest;
 import com.wallet.app.Wallet_Application.entity.Category;
 import com.wallet.app.Wallet_Application.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

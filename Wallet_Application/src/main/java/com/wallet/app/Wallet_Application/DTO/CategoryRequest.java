@@ -1,4 +1,4 @@
-package com.wallet.app.Wallet_Application.controller.DTO;
+package com.wallet.app.Wallet_Application.DTO;
 
 public class CategoryRequest {
     private Long id;

@@ -19,6 +19,7 @@ public class User implements UserDetails {
     private Long id;
 
     private String username;
+    private String email;
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -31,6 +32,14 @@ public class User implements UserDetails {
     private List<Account> accounts;
 
 //    getter and setters
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Role getRole() {
         return role;

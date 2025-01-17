@@ -1,6 +1,6 @@
 package com.wallet.app.Wallet_Application.service;
 
-import com.wallet.app.Wallet_Application.controller.DTO.TransactionRequest;
+import com.wallet.app.Wallet_Application.DTO.TransactionRequest;
 import com.wallet.app.Wallet_Application.daoRepository.*;
 import com.wallet.app.Wallet_Application.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;

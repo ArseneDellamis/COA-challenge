@@ -1,10 +1,7 @@
 package com.wallet.app.Wallet_Application.service;
 
 import com.wallet.app.Wallet_Application.controller.DTO.TransactionRequest;
-import com.wallet.app.Wallet_Application.daoRepository.AccountRepository;
-import com.wallet.app.Wallet_Application.daoRepository.BudgetRepository;
-import com.wallet.app.Wallet_Application.daoRepository.TransactionRepository;
-import com.wallet.app.Wallet_Application.daoRepository.UserRepository;
+import com.wallet.app.Wallet_Application.daoRepository.*;
 import com.wallet.app.Wallet_Application.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -12,6 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -21,7 +19,7 @@ public class TransactionService {
     private final AccountRepository accountRepository;
     private final BudgetRepository budgetRepository;
     private final CategoryRepository categoryRepository;
-    private final SubcategoryRepository subcategoryRepository;
+    private final SubCategoryRepository subcategoryRepository;
     private final UserRepository userRepository;
 
     @Autowired
@@ -29,7 +27,7 @@ public class TransactionService {
                               AccountRepository accountRepository,
                               BudgetRepository budgetRepository,
                               CategoryRepository categoryRepository,
-                              SubcategoryRepository subcategoryRepository,
+                              SubCategoryRepository subcategoryRepository,
                               UserRepository userRepository) {
         this.transactionRepository = transactionRepository;
         this.accountRepository = accountRepository;
@@ -67,9 +65,10 @@ public class TransactionService {
         Transaction transaction = new Transaction();
         transaction.setDescription(transactionRequest.getDescription());
         transaction.setAmount(transactionRequest.getAmount());
-        transaction.setDateTime(transactionRequest.getDateTime());
+        transaction.setDateTime(LocalDateTime.now());
         transaction.setType(transactionRequest.getType());
         transaction.setAccount(account);
+        transaction.setUser(user);
         transaction.setCategory(category);
         transaction.setSubcategory(subcategory);
 

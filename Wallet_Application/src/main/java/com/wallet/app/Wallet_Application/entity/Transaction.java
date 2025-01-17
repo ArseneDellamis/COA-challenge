@@ -30,8 +30,9 @@ public class Transaction {
     @JoinColumn(name = "subcategory_id", nullable = true)
     private Subcategory subcategory;
 
-    // getters and setters
-
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false) // New field
+    private User user;
 
     public Long getId() {
         return id;
@@ -96,6 +97,17 @@ public class Transaction {
     public void setSubcategory(Subcategory subcategory) {
         this.subcategory = subcategory;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    // Getters and setters
 }
+
 
 

@@ -20,21 +20,21 @@ public class BudgetController {
 
     private final BudgetService budgetService;
     private final UserRepository userRepository;
-
     @Autowired
-    public BudgetController(BudgetService budgetService, UserRepository userRepository) {
+    public BudgetController(BudgetService budgetService,
+                            UserRepository userRepository) {
         this.budgetService = budgetService;
         this.userRepository = userRepository;
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Budget> createBudget(@RequestBody BudgetRequest budgetRequest, Authentication authentication) {
-        String username = authentication.getName();
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-
-        Budget budget = budgetService.createBudget(user.getId(), budgetRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body(budget);
+    public ResponseEntity<?> createBudget(@RequestBody BudgetRequest budgetRequest, Authentication authentication) {
+        try {
+            Budget budget = budgetService.createBudget(authentication, budgetRequest);
+            return ResponseEntity.status(HttpStatus.CREATED).body(budget);
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
     }
 
     @GetMapping
@@ -42,9 +42,10 @@ public class BudgetController {
         String username = authentication.getName();
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-
-        List<Budget> budgets = budgetService.getBudgetsForUser(user.getId());
+        long userId = user.getId();
+        List<Budget> budgets = budgetService.getBudgetsForUser(userId);
         return ResponseEntity.ok(budgets);
     }
 }
+
 

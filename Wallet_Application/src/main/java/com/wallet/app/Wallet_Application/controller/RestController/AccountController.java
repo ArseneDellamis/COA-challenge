@@ -1,5 +1,6 @@
 package com.wallet.app.Wallet_Application.controller.RestController;
 
+import com.wallet.app.Wallet_Application.controller.DTO.AccountRequest;
 import com.wallet.app.Wallet_Application.daoRepository.UserRepository;
 import com.wallet.app.Wallet_Application.entity.Account;
 import com.wallet.app.Wallet_Application.entity.User;

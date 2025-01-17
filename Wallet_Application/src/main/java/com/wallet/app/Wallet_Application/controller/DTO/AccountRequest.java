@@ -1,4 +1,4 @@
-package com.wallet.app.Wallet_Application.controller.RestController;
+package com.wallet.app.Wallet_Application.controller.DTO;
 
 import com.wallet.app.Wallet_Application.entity.AccountType;
 

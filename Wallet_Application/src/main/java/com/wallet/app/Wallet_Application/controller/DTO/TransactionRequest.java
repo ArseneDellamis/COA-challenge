@@ -8,7 +8,7 @@ public class TransactionRequest {
 
     private String description;
     private double amount;
-    private LocalDateTime dateTime;
+//    private LocalDateTime dateTime;
     private TransactionType type;
     private Long accountId;
     private Long categoryId;
@@ -33,13 +33,13 @@ public class TransactionRequest {
         this.amount = amount;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
-    }
-
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
-    }
+//    public LocalDateTime getDateTime() {
+//        return dateTime;
+//    }
+//
+//    public void setDateTime(LocalDateTime dateTime) {
+//        this.dateTime = dateTime;
+//    }
 
     public TransactionType getType() {
         return type;
